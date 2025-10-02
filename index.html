@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jabatan Kerja Raya Malaysia (JKR) — Official</title>
+  <meta name="description" content="Official website template for Jabatan Kerja Raya Malaysia (JKR). Responsive, accessible, and easy to customize." />
+  <style>
+    :root{
+      --primary:#006b3c; /* JKR green */
+      --accent:#f2c230;
+      --muted:#6b6b6b;
+      --bg:#f7f9fb;
+      --card:#ffffff;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#111;line-height:1.45}
+    header{background:linear-gradient(90deg, rgba(0,107,60,0.95), rgba(0,107,60,0.85));color:#fff;padding:18px 20px;position:sticky;top:0;z-index:20}
+    .container{max-width:1100px;margin:0 auto;padding:0 18px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand .logo{width:56px;height:56px;border-radius:6px;background:#fff;display:flex;align-items:center;justify-content:center;color:var(--primary);font-weight:700}
+    nav{margin-left:auto}
+    .nav-list{display:flex;gap:14px;align-items:center}
+    .nav-list a{color:#e8f6ec;text-decoration:none;padding:8px 10px;border-radius:6px;font-weight:600}
+    .nav-list a:hover{background:rgba(255,255,255,0.06)}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:48px 0}
+    .hero h1{font-size:32px;margin:0 0 12px}
+    .hero p{color:#e6f2ea;margin:0 0 18px}
+    .cta{display:flex;gap:12px}
+    .btn{background:var(--accent);border:none;padding:10px 14px;border-radius:8px;font-weight:700;cursor:pointer}
+    .btn.secondary{background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.14)}
+
+    .search-card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(20,30,40,0.06)}
+    .search-card input, .search-card select{width:100%;padding:10px;margin-top:8px;border-radius:6px;border:1px solid #e6e9ee}
+
+    .section{padding:36px 0}
+    h2.section-title{font-size:20px;margin:0 0 12px}
+    .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+    .card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(20,30,40,0.04)}
+    .card h3{margin:0 0 8px}
+    .meta{color:var(--muted);font-size:13px}
+
+    footer{background:#0b2b16;color:#d9efe0;padding:22px 0;margin-top:24px}
+    .footer-grid{display:grid;grid-template-columns:1fr 220px;gap:18px}
+    .logo-small{display:flex;align-items:center;gap:10px}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      nav{order:3;width:100%}
+      .nav-list{flex-wrap:wrap;justify-content:center}
+      .footer-grid{grid-template-columns:1fr}
+    }
+
+    /* accessibility focus */
+    a:focus, button:focus, input:focus{outline:3px solid rgba(2,120,80,0.18);outline-offset:2px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex;align-items:center">
+      <div class="brand">
+        <div class="logo" aria-hidden>JKR</div>
+        <div>
+          <div style="font-weight:800">Jabatan Kerja Raya Malaysia</div>
+          <small style="color:rgba(255,255,255,0.85)">Public Works Department — Pembangunan Infrastruktur Negara</small>
+        </div>
+      </div>
+      <nav aria-label="Primary navigation">
+        <ul class="nav-list" role="menubar">
+          <li role="none"><a role="menuitem" href="#home">Home</a></li>
+          <li role="none"><a role="menuitem" href="#services">Services</a></li>
+          <li role="none"><a role="menuitem" href="#projects">Projects</a></li>
+          <li role="none"><a role="menuitem" href="#news">News</a></li>
+          <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="home">
+    <section class="hero">
+      <div>
+        <h1>Building Malaysia — Safe, Sustainable, Connected</h1>
+        <p style="color:#fff;opacity:0.95">JKR leads the planning, design, construction and maintenance of public infrastructure across Malaysia. Explore our services, current projects and procurement opportunities.</p>
+        <div class="cta">
+          <button class="btn" onclick="location.href='#projects'">View Projects</button>
+          <button class="btn secondary" onclick="location.href='#contact'">Get in Touch</button>
+        </div>
+        <div style="margin-top:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+          <div class="card" style="padding:10px;background:rgba(255,255,255,0.06);color:#fff">Roads Maintained<br><strong>12,340 km</strong></div>
+          <div class="card" style="padding:10px;background:rgba(255,255,255,0.06);color:#fff">Active Projects<br><strong>284</strong></div>
+          <div class="card" style="padding:10px;background:rgba(255,255,255,0.06);color:#fff">Contract Partners<br><strong>1,092</strong></div>
+        </div>
+      </div>
+
+      <aside class="search-card" aria-labelledby="search-title">
+        <h3 id="search-title">Quick services</h3>
+        <label for="search">Search services, projects, tenders</label>
+        <input id="search" placeholder="e.g. Jalan, Tender, Penguatkuasaan" />
+        <label for="state">State</label>
+        <select id="state" aria-label="Select state">
+          <option value="">All states</option>
+          <option>Wilayah Persekutuan</option>
+          <option>Selangor</option>
+          <option>Johor</option>
+          <option>Penang</option>
+        </select>
+        <button class="btn" style="margin-top:10px" onclick="alert('Search simulated — integrate backend to make this live')">Search</button>
+
+        <hr style="margin:14px 0;border:none;border-top:1px solid #eef2f6" />
+        <h4 style="margin:0">Contact numbers</h4>
+        <p class="meta" style="margin:6px 0 0">JKR Hotline: <strong>+60 3-8888 0000</strong><br/>Emergency: <strong>999</strong></p>
+      </aside>
+    </section>
+
+    <section id="services" class="section">
+      <h2 class="section-title">Our Services</h2>
+      <div class="grid-3">
+        <article class="card" aria-labelledby="s1">
+          <h3 id="s1">Roads & Highways</h3>
+          <p class="meta">Design, maintenance and safety audits for federal and state roads.</p>
+        </article>
+        <article class="card" aria-labelledby="s2">
+          <h3 id="s2">Buildings & Facilities</h3>
+          <p class="meta">Public buildings, hospitals, schools and government facilities planning and asset management.</p>
+        </article>
+        <article class="card" aria-labelledby="s3">
+          <h3 id="s3">Water Infrastructure</h3>
+          <p class="meta">Flood mitigation, drainage, and small dams for resilient communities.</p>
+        </article>
+        <article class="card" aria-labelledby="s4">
+          <h3 id="s4">Project Management</h3>
+          <p class="meta">Tendering, procurement and contract administration for public works.</p>
+        </article>
+        <article class="card" aria-labelledby="s5">
+          <h3 id="s5">Sustainability & Green Design</h3>
+          <p class="meta">Low-carbon construction, material reuse and energy-efficient buildings.</p>
+        </article>
+        <article class="card" aria-labelledby="s6">
+          <h3 id="s6">Research & Standards</h3>
+          <p class="meta">Technical standards, testing labs and research to advance Malaysian infrastructure.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>North–South Highway Rehabilitation</h3>
+          <p class="meta">Rehabilitation and safety upgrades in selected sections.</p>
+        </div>
+        <div class="card">
+          <h3>Coastal Flood Mitigation — Port City</h3>
+          <p class="meta">Multi-year project to protect coastal towns from tidal flooding.</p>
+        </div>
+        <div class="card">
+          <h3>Rural Bridges Program</h3>
+          <p class="meta">Replacing aging wooden bridges with modular steel structures.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="news" class="section">
+      <h2 class="section-title">Latest News</h2>
+      <div class="card">
+        <article>
+          <h3>JKR issues new tender for road resurfacing</h3>
+          <p class="meta">Published: Aug 22, 2025 — Tender closing: Sep 30, 2025</p>
+          <p>Visit the procurement portal to download documents and submit expressions of interest.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2 class="section-title">Contact & Feedback</h2>
+      <div style="display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:start">
+        <form class="card" onsubmit="handleContact(event)">
+          <label for="name">Name</label>
+          <input id="name" required />
+          <label for="email">Email</label>
+          <input id="email" type="email" required />
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" style="width:100%;padding:10px;border-radius:6px;border:1px solid #e6e9ee"></textarea>
+          <div style="margin-top:10px;display:flex;gap:10px">
+            <button class="btn" type="submit">Send Message</button>
+            <button type="reset" class="btn secondary">Reset</button>
+          </div>
+        </form>
+
+        <aside class="card">
+          <h4>Office (Putrajaya)</h4>
+          <p class="meta">No. 1, Kompleks Kerajaan, Presint 4, 62100 Putrajaya</p>
+          <h4 style="margin-top:12px">Follow</h4>
+          <p class="meta">Twitter / Facebook / LinkedIn</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="logo-small">
+          <div class="logo" style="width:44px;height:44px">JKR</div>
+          <div>
+            <strong>Jabatan Kerja Raya Malaysia</strong>
+            <div class="meta">Building Malaysia — Since 1872</div>
+          </div>
+        </div>
+        <p style="margin-top:12px;color:#d9efe0">This is a website template. For official information, link to the government portal and procurement system.</p>
+      </div>
+      <div>
+        <div class="meta">Useful links</div>
+        <ul style="padding-left:16px;margin:8px 0 0">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function handleContact(e){
+      e.preventDefault();
+      const name=document.getElementById('name').value.trim();
+      const email=document.getElementById('email').value.trim();
+      if(!name||!email){alert('Please fill required fields');return}
+      alert('Thank you, '+name+" — your message has been recorded (simulation). Connect a backend to make this live.");
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
